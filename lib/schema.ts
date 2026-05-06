@@ -7,6 +7,7 @@ export const incidentSchema = z.object({
   locations: z.array(z.string()).min(1, "Please select at least one location"),
   otherLocation: z.string().optional(),
   email: z.string().email("Invalid email address").optional().or(z.literal("")),
+  description: z.string().optional(),
   honeypot: z.string().max(0, "Bot detected"),
 });
 

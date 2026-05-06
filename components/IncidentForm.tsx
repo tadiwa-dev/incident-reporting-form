@@ -191,6 +191,20 @@ export default function IncidentForm() {
         )}
       </fieldset>
 
+      {/* Briefly explain what happened (Optional) */}
+      <fieldset>
+        <legend className="text-sm font-semibold text-stone-900 mb-1">
+          Briefly explain what happened
+          <span className="font-normal text-stone-400 ml-1">— optional</span>
+        </legend>
+        <textarea
+          {...register("description")}
+          placeholder="Type details here..."
+          rows={4}
+          className="w-full text-sm px-3 py-2.5 rounded-lg border border-stone-200 focus:border-stone-400 focus:ring-1 focus:ring-stone-200 transition-all placeholder:text-stone-300 resize-none"
+        />
+      </fieldset>
+
       {/* Email (Optional) */}
       <fieldset>
         <legend className="text-sm font-semibold text-stone-900 mb-1">

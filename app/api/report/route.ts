@@ -60,6 +60,11 @@ export async function POST(req: NextRequest) {
             ${data.otherLocation ? `(${data.otherLocation})` : ""}
           </p>
           
+          ${data.description ? `
+          <p><strong>Details of Incident:</strong><br/> 
+            ${data.description.replace(/\n/g, "<br/>")}
+          </p>` : ""}
+          
           <h2 style="font-size: 18px; color: #4f46e5; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; margin-top: 24px;">Contact Information</h2>
           <p><strong>Email Provided:</strong><br/> ${data.email || "Anonymous (None provided)"}</p>
           
